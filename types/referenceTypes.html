@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //obj2 is pointing to the same memory location as obj1 
+        const obj1 = new Object();
+        const obj2 = obj1;
+
+        obj1.myProperty = "Examples of instantiation Objects";
+        document.write(obj2.myProperty);
+
+        const products = new Array("Bob", "John", "Ana");
+        const date = new Date();
+        const error = new Error("Something went wrong");
+        const myFunc = new Function("document.write('Hello')"); // very rare to use, better use it in Literals
+        const regEx = new RegExp("\\d+");
+
+    </script>
+</body>
+</html>

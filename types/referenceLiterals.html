@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // examples of how to use the methodss in literal form, without instanciation
+        const student = {
+            "name": "Bob",
+            "score": 80 
+        };
+        document.write(student.name);
+        document.write("<br/><br/>");
+        
+        const studentNames = ["Bob", "John", "Ana"];
+        document.write(studentNames[2]);
+        document.write("<br/><br/>");
+        
+        function myFunc(name){
+            return document.write("Hello " + name);
+        }
+        myFunc(student.name);
+        document.write("<br/><br/>");
+
+        const regEx = /\d+/;
+
+    </script>
+</body>
+</html>
