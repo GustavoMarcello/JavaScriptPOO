@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function displayParameters(){
+                //this is a object used in a global scope.
+                // it will point to the same object thait it s being evocad
+                document.write(`${this.id} ${this.name} <br/>`);
+            }
+
+        //example passing a function as a value of an obj parameter.
+        const student1 = {
+            id: 1,
+            name: "Bob",
+            display: displayParameters
+        };
+        const student2 = {
+            id: 2,
+            name: "Blake",
+            display: displayParameters
+        };
+        const student3 = {
+            id: 3,
+            name: "Arthur",
+        };
+
+
+        student1.display();
+        student2.display();
+        //the method call expect an object to be used by the function.
+        //it s possible to pass more arguments, just separating by comma.
+        displayParameters.call(student3);
+        
+    </script>
+</body>
+</html>

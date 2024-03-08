@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //some caracteristic to not declare a function to a variable, is that:
+        //It will be in a global scope, so can be called in anyware (before or after the creation line).
+        document.write(evenOrOdd(10) + "<br/>");
+        function evenOrOdd(num){
+            if (num%2==0){
+                return "even"
+            }else{
+                return "odd"
+            };
+        };
+        
+        // seccond way to create a function, declaring inside a variable
+        // in this way the order is important, so the variable must be declare first than it be call.
+        const evenOrOdd2 = function(num){
+            if (num%2==0){
+                return "even"
+            }else{
+                return "odd"
+            };
+        };
+        document.write(evenOrOdd2(5)+ "<br/>");
+
+        // JS accept multiples arguments in a function even that it is expectiong just one
+        const multipleArguments = function(num){
+            //to access you can use the key word arguments
+            document.write(arguments[2] + "<br/>");
+            if (num%2==0){
+                return "even"
+            }else{
+                return "odd"
+            };
+        };
+        //passing more arguments
+        document.write(multipleArguments(2, "bob", false)+ "<br/>");
+
+    </script>
+</body>
+</html>

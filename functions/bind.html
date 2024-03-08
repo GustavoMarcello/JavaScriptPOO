@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function displayParameters(testScore){
+                //this is a object used in a global scope.
+                // it will point to the same object thait it s being evocad
+                document.write(`${this.id} ${this.name}: ${testScore} <br/>`);
+            }
+
+        //example passing a function as a value of an obj parameter.
+        const student1 = {
+            id: 1,
+            name: "Bob",
+        };
+        const student2 = {
+            id: 2,
+            name: "Blake",
+        };
+
+        //bind method must be used by a variable
+        const display1 = displayParameters.bind(student1, 10);
+        display1()
+        const display2 = displayParameters.bind(student2, 8);
+        display2()
+    </script>
+</body>
+</html>
